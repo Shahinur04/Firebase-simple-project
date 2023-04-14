@@ -11,3 +11,4 @@
 // import google authProvider and create new provider
 // use signInWithPopup pass auth and provider 
 // activated sigIn method
+// [vite] change:127.0.0.1 to local host
