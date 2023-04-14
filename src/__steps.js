@@ -9,3 +9,5 @@
 // login.js import getAuth from firebase/auth
 // const auth = getAuth('app');
 // import google authProvider and create new provider
+// use signInWithPopup pass auth and provider 
+// activated sigIn method
