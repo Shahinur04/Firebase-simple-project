@@ -37,9 +37,10 @@ const Login = () => {
   return (
     <div>
 
-    {/* if  */}
-      <button onClick={handleGoogleSignIn}>Google login</button>
-      <button onClick={handleGoogleSignOut}>SignOut</button>
+    {/* user ? logout : sign in  */}
+      { user ?<button onClick={handleGoogleSignOut}>SignOut</button> :
+      <button onClick={handleGoogleSignIn}>Google login</button>}
+      
       
       {user && 
         <div>
