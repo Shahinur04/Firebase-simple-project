@@ -15,7 +15,10 @@ const Login = () => {
 
   const handleGoogleSignOut = () => {
     signOut(auth)
-      .then()
+      .then((result)=>{
+        console.log(result)
+        setUser(null);
+      })
       .catch((error) => {
         console.log(error);
       });
@@ -33,22 +36,18 @@ const Login = () => {
   };
   return (
     <div>
+
+    {/* if  */}
       <button onClick={handleGoogleSignIn}>Google login</button>
       <button onClick={handleGoogleSignOut}>SignOut</button>
-      {user && (
+      
+      {user && 
         <div>
-          <p>User name:{user.displayName}</p>
+          <h3>User name:{user.displayName}</h3>
           <img src={user.photoURL} alt="" />
-          <p>Email:{user.email}</p>
+          <h3>Email:{user.email}</h3>
         </div>
-      )}
-      {user && (
-        <div>
-          {user.displayName && <h3>User name:{user.displayName}</h3>}
-          {user.photoURL && <img src={user.photoURL} alt="" />}
-          {user.email && <h3>Email:{user.email}</h3>}
-        </div>
-      )}
+      }
     </div>
   );
 };
